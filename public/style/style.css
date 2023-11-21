@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@300;400;600&family=Poppins&display=swap');
+
+/* Cores principais / VARIAVEIS */
+:root {
+    --bg-primary: #1f1f1f;
+    --bg-secondary: #2c2c2c;
+    --bg-gray: #343434;
+    --bg-dark: #222222;
+    
+    --white: #fff;
+    --blue-primary: #548DD1;
+    --red-primary: #BB3535;
+    --green-primary: #239A3D;
+
+    --input-primary: #565656;
+
+    --blue-hover-secondary: #7ab4fb;
+    --blue-hover-primary: #186acf;
+}
+
+
+/* TODOS OS ELEMENTOS, usamos "*" */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    /* border: solid red 1px */
+}
+
+input, button, select {
+    cursor: pointer;
+    border: 0px;
+    outline: 0px;
+}
+
+.blue {
+    color: var(--blue-primary)
+}
+
+.red {
+    color: var(--red-primary)
+}
+
+.green {
+    color: var(--green-primary)
+}
+
+/* CONTAINER - TELA INTEIRA (FUNDO)*/
+.container {
+    height: 100vh;
+    background-color: var(--bg-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 750px;  
+    min-width: 800px;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    background-color: var(--bg-secondary);
+    width: 100%;
+    min-width: 800px;   
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar h1 {
+    font-size: 25px;
+    /* width: 100px; */
+    text-align: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 500px;
+    font-weight: 700;
+    z-index: 1;
+}
+
+.navbar h1 a {
+    text-decoration: none;
+    letter-spacing: 1.5px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 50px;
+    align-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    height: 80px;
+    width: 100%;
+    position: absolute;
+}
+
+.navbar li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+    text-align: center;
+}
+
+.navbar li a {
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.navbar li a:hover {
+    color: var(--blue-hover-secondary);
+    transition: all 0.5s ease;
+}
+
+.btn_tema {
+    background-color: rgb(235, 235, 235);
+    border-radius: 50px;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    /* width: 100px; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 500px;
+    z-index: 1;
+}
+
+.btn_tema i {
+    color: black;
+}
+
+.box {
+    color: var(--white);
+    width: 800px;
+    height: 750px;
+    /* background-color: var(--bg-secondary); */
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+/* CAIXA GERAL DOS VALORES */
+.nav_saldo {
+    gap: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    cursor: default;
+}
+
+.box_tipo {
+    display: flex;
+    gap: 15px;
+}
+
+
+/* BLOCO DOS VALORES - ENTRADAS, SAIDAS E TOTAL */
+.box_saldo i {
+    color: var(--blue-primary);
+}
+
+.box_saldo {
+    width: 300px;
+    /* position: relative; */
+}
+
+.box_saldo h2 {
+    font-size: 3em; 
+}
+
+.box_entrada i {
+    color: var(--green-primary);
+}
+
+.box_entrada h2, .box_saida h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.box_saida i {
+    color: var(--red-primary);
+}
+
+/* FIM DO BLOCO DOS VALORES */
+
+.entrada, .saida, .saldo {
+    background-color: var(--bg-gray);
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 20px 10px 20px;  
+    border-radius: 5px;
+}
+
+.saldo {
+    font-size: 3.5em;
+    font-weight: 600;
+    height: 90px;
+}
+
+.saldo span, .entrada span, .saida span {
+    margin-right: 5px;
+}
+
+.saida, .entrada {
+    font-size: 25px;
+    padding: 15px 33px 15px 15px;  
+    font-weight: 700;
+    height: 55px;
+}
+
+/* BOX ADICIONAR */
+.box_adicionar {
+    display: flex;
+    gap: 10px;
+    width: 605px;
+}
+
+/* BOTÃO ADICIONAR */
+.btn_adicionar {
+    background-color: var(--blue-primary);
+    height: 40px;
+    width: 52%;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+    border: none;
+    text-align: start;
+    padding-left: 10px;
+    transition: all 0.2s ease-in;
+}
+
+.btn_adicionar:hover {
+    background-color: var(--blue-hover-primary);
+    transition: all 0.2s ease-in;
+}
+
+/* SELECT - TIPO ENTRADA OU SAIDA */
+.tipo_adicionar {
+    background-color: var(--input-primary);
+    height: 40px;
+    width: 50%;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 5px; 
+    border: none;
+    padding-left: 10px;
+    transition: all 0.2s ease;
+}
+
+.tipo_adicionar:hover {
+    background-color: #3b3b3b;
+    transition: all 0.2s ease;
+}
+
+/* LISTA EXTRATO - ENTRADAS E SAIDAS */
+.box_extrato {
+    display: flex;
+    width: 605px;
+    justify-content: center;
+    background-color: var(--bg-dark);
+    height: 50%;
+    margin: 20px;
+    border: solid 1px var(--blue-primary)
+}
+
+/* BARRA DE SCROLL */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #2f2f2f;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #111111;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }

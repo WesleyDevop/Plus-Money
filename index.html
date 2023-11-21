@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plus Money</title>
+    <link rel="stylesheet" href="./public/style/style.css">
+    <script src="https://kit.fontawesome.com/87ae717b84.js" crossorigin="anonymous"></script>
+</head>
+<body class="">
+    <nav class="navbar">
+        <h1><a href="#">Plus Money<span class="blue">.</span></a></h1>
+        <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#">Extrato</a></li>
+            <li><a href="#">Dicas</a></li>
+            <li><a href="#">Duvidas</a></li>
+        </ul>    
+    </nav>
+    <section class="container light" id="inicio">
+        <div class="box">
+            <div class="nav_saldo">
+                <div class="box_saldo">
+                    <h2><i class="fa-solid fa-sack-dollar"></i> Saldo</h2>
+                    <div class="saldo"><span style="color: #548DD1; font-weight: 700;">R$</span>800</div>
+                </div>
+                <div class="box_tipo">
+                    <div class="box_entrada">
+                        <div class="box_entrada">
+                            <h2><i class="fa-solid fa-hand-holding-dollar"></i> Entradas</h2>
+                            <div class="entrada"><span style="color: #239A3D; font-weight: 700;">R$</span> 1.200</div>
+                        </div>
+                    </div>
+                    <div class="box_saida">
+                        <div class="box_saida">
+                            <h2><i class="fa-solid fa-file-invoice-dollar"></i> Saida</h2>
+                            <div class="saida"><span style="color: #BB3535; font-weight: 700;">R$</span> 400</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box_adicionar">
+                    <button class="btn_adicionar">Adicionar</button>
+                    <select class="tipo_adicionar" name="" id="">
+                        <option value="">Entrada</option>
+                        <option value="">Saida</option>
+                    </select>
+                </div>
+            </div>
+            <div class="box_extrato">
+            </div>
+        </div>
+    </section>
+    <script src="/public/script/app.js"></script>
+</body>
+</html>
