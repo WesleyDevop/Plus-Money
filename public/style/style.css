@@ -2,20 +2,22 @@
 
 /* Cores principais / VARIAVEIS */
 :root {
-    --bg-primary: #1f1f1f;
-    --bg-secondary: #2c2c2c;
-    --bg-gray: #343434;
-    --bg-dark: #222222;
+    --bg-primary: #141414;
+    --bg-secondary: #1e1e1e;
+    --bg-gray: #262626;
+    --bg-dark: #1e1e1e;
     
     --white: #fff;
     --blue-primary: #548DD1;
     --red-primary: #BB3535;
     --green-primary: #239A3D;
-
+    
     --input-primary: #565656;
-
-    --blue-hover-secondary: #7ab4fb;
+    --label-primary: #f1f1f1;
+    
+    --blue-hover-secondary: #0f56ac;
     --blue-hover-primary: #186acf;
+    --red-hover: #a92424;
 }
 
 
@@ -27,6 +29,19 @@
     font-family: 'Poppins', sans-serif;
     color: white;
     /* border: solid red 1px; */
+}
+
+/* INPUT NUMBER FORMATAÇÃO */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 /* BARRA DE SCROLL */
@@ -310,11 +325,12 @@ input, button, select {
     width: 100vw;
     height: 100vh;
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.45);
+    background-color: rgba(0, 0, 0, 0.697);
     z-index: 999;
     display: flex;
     justify-content: center;
     align-items: center;
+    display: none;
 }
 
 .modal_adicionar .modal_box {
@@ -325,14 +341,55 @@ input, button, select {
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    padding: 80px;
+    padding: 30px;
     justify-content: center;
+    gap: 10px;
+}
+
+.modal_text {
+    font-size: 25px;
+    cursor: default;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-family: 'Montserrat', monospace;
+}
+
+.modal_box label {
+    font-size: 20px;
+    color: var(--label-primary);
+}
+
+.box_categoria {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal_box select, .modal_box input {
+    background-color: var(--bg-gray);
+    height: 35px;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.box_value {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 10px;
+}
+
+.line_2, .line_1 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
 }
 
 .modal_btn {
     display: flex;
     gap: 10px;
     height: 50px;
+    margin-top: 30px;
 }
 
 .modal_btn button {
@@ -346,8 +403,20 @@ input, button, select {
 
 .modal_btn .btn_add {
     background-color: var(--blue-hover-primary);
+    transition: all 0.5s ease;
+}
+
+.modal_btn .btn_add:hover {
+    background-color: var(--blue-hover-secondary);
+    transition: all 0.5s ease;
 }
 
 .modal_btn .btn_cancel {
     background-color: var(--red-primary);
+    transition: all 0.5s ease;
+}
+
+.modal_btn .btn_cancel:hover {
+    background-color: var(--red-hover);
+    transition: all 0.5s ease;
 }
