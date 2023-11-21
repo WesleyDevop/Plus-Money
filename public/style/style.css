@@ -326,7 +326,7 @@ input, button, select {
     display: flex;
     flex-direction: column;
     padding: 80px;
-    justify-content: cesnter;
+    justify-content: center;
 }
 
 .modal_btn {
