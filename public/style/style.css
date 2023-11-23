@@ -82,6 +82,22 @@ input, button, select {
     color: var(--green-primary)
 }
 
+.mostrar {
+    animation: modal .3s;
+    display: flex !important;
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
 /* CONTAINER - TELA INTEIRA (FUNDO)*/
 .container {
     height: 100vh;
@@ -180,7 +196,6 @@ input, button, select {
     color: var(--white);
     width: 800px;
     height: 750px;
-    /* background-color: var(--bg-secondary); */
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -313,10 +328,24 @@ input, button, select {
     display: flex;
     width: 605px;
     justify-content: center;
-    background-color: var(--bg-dark);
+    background-color: var(--bg-gray);
     height: 50%;
     margin: 20px;
     border: solid 1px var(--blue-primary)
+}
+
+.entradas_list {
+    border-right: 1px solid var(--blue-primary);
+}
+
+.entradas_list, .saidas_list {
+    width: 50%;
+    /* border: solid red 1px; */
+    padding: 5px;
+}
+
+.entradas_list p, .saidas_list p {
+    border-bottom: 1px solid var(--blue-primary);
 }
 
 /* MODAL STYLE */
@@ -327,7 +356,6 @@ input, button, select {
     position: fixed;
     background-color: rgba(0, 0, 0, 0.697);
     z-index: 999;
-    display: flex;
     justify-content: center;
     align-items: center;
     display: none;

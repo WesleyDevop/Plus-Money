@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/87ae717b84.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="modal_adicionar">
+    <div class="modal_adicionar" id="modal_adicionar">
         <div class="modal_box">
             <h2 class="modal_text">Adicione as Informações:</h2>
             <div class="box_categoria">
@@ -29,7 +29,7 @@
 
                 <div class="line_2">
                     <label for="value">Valor</label>
-                    <input type="number" id="value">
+                    <input type="number" id="value" step="0.01" name="quantity" min="0.01">
                 </div>
             </div>
             <div class="modal_btn">
@@ -77,6 +77,12 @@
                 </div>
             </div>
             <div class="box_extrato">
+                <div class="entradas_list">
+                    <p>Entradas</p>
+                </div>
+                <div class="saidas_list">
+                    <p>Saidas</p>
+                </div>
             </div>
         </div>
     </section>
