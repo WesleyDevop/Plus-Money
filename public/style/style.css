@@ -3,9 +3,9 @@
 /* Cores principais / VARIAVEIS */
 :root {
     --bg-primary: #141414;
-    --bg-secondary: #1e1e1e;
-    --bg-gray: #262626;
-    --bg-dark: #1e1e1e;
+    --bg-secondary: #151515;
+    --bg-gray: #181818;
+    --bg-dark: #1a1a1a;
     
     --white: #fff;
     --blue-primary: #548DD1;
@@ -27,6 +27,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    font-weight: 500;
     color: white;
     /* border: solid red 1px; */
 }
@@ -112,7 +113,8 @@ input, button, select {
 
 .navbar {
     display: flex;
-    background-color: var(--bg-secondary);
+    /* background-color: var(--bg-secondary); */
+    position: absolute;
     width: 100%;
     min-width: 800px;   
     height: 80px;
@@ -128,15 +130,23 @@ input, button, select {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
     right: 500px;
-    font-weight: 700;
+    font-weight: 800;
     z-index: 1;
+
 }
 
 .navbar h1 a {
+    display: flex;
     text-decoration: none;
     letter-spacing: 1.5px;
+    font-weight: 500;
+}
+
+.navbar h1 a img {
+    width: 30px;
+    /* color: white; */
+    margin-left: 10px;
 }
 
 .navbar ul {
@@ -220,34 +230,45 @@ input, button, select {
 .box_tipo {
     display: flex;
     gap: 15px;
+    width: 100%;
 }
 
 
 /* BLOCO DOS VALORES - ENTRADAS, SAIDAS E TOTAL */
-.box_saldo i {
+.box_saldo img {
     color: var(--blue-primary);
+    width: 50px;
 }
 
 .box_saldo {
-    width: 300px;
+    width: 50%;
     /* position: relative; */
 }
 
 .box_saldo h2 {
-    font-size: 3em; 
+    display: flex;
+    margin-bottom: 5px;
+    font-size: 2.5em; 
 }
 
-.box_entrada i {
+.box_entrada img {
     color: var(--green-primary);
 }
 
 .box_entrada h2, .box_saida h2 {
     font-size: 22px;
     margin-bottom: 5px;
+    display: flex;
+    /* font-weight: 400; */
 }
 
-.box_saida i {
+.box_saida img {
     color: var(--red-primary);
+}
+
+.box_entrada img, .box_saida img {
+    width: 20px;
+    margin-right: 5px;
 }
 
 /* FIM DO BLOCO DOS VALORES */
@@ -264,7 +285,7 @@ input, button, select {
 
 .saldo {
     font-size: 3.5em;
-    font-weight: 600;
+    font-weight: 400;
     height: 90px;
 }
 
@@ -275,15 +296,27 @@ input, button, select {
 .saida, .entrada {
     font-size: 25px;
     padding: 15px 33px 15px 15px;  
-    font-weight: 700;
+    font-weight: 400;
     height: 55px;
+}
+
+.saldoTotal {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.box_entrada, .box_saida {
+    width: 100%;
 }
 
 /* BOX ADICIONAR */
 .box_adicionar {
     display: flex;
     gap: 10px;
-    width: 605px;
+    width: 100%;
 }
 
 /* BOTÃO ADICIONAR */
@@ -326,7 +359,7 @@ input, button, select {
 /* LISTA EXTRATO - ENTRADAS E SAIDAS */
 .box_extrato {
     display: flex;
-    width: 605px;
+    width: 100%;
     justify-content: center;
     background-color: var(--bg-gray);
     height: 50%;
