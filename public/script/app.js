@@ -23,3 +23,29 @@ let openModal = document.querySelector('.btn_adicionar');
 openModal.addEventListener('click', () => {
     iniciaModal('modal_adicionar');
 })
+
+function abreNavbar() {
+    const line1 = document.querySelector('.line1');
+	const line2 = document.querySelector('.line2');
+	const line3 = document.querySelector('.line3');
+    
+    const secondaryNav = document.querySelector('.secondary_nav');
+
+    if(secondaryNav.classList.contains('mostrarNav')) {
+        secondaryNav.classList.remove('mostrarNav');
+		line1.classList.remove('line1-rotate');
+		line2.classList.remove('line2-rotate');
+		line3.classList.remove('line3-rotate');
+    } else {
+        secondaryNav.classList.add('mostrarNav');
+        line1.classList.toggle('line1-rotate');
+        line2.classList.toggle('line2-rotate'); 
+        line3.classList.toggle('line3-rotate'); 
+    }
+}
+
+let hamburgerNav = document.getElementById('hamburgerNav');
+
+hamburgerNav.addEventListener('click', () => {
+    abreNavbar();
+})
