@@ -30,12 +30,13 @@ function abreNavbar() {
 	const line3 = document.querySelector('.line3');
     
     const secondaryNav = document.querySelector('.secondary_nav');
-
-    if(secondaryNav.classList.contains('mostrarNav')) {
+    const hamburgerOn = secondaryNav.classList.contains('mostrarNav');
+    
+    if(hamburgerOn) {
         secondaryNav.classList.remove('mostrarNav');
-		line1.classList.remove('line1-rotate');
-		line2.classList.remove('line2-rotate');
-		line3.classList.remove('line3-rotate');
+        line1.classList.toggle('line1-rotate');
+        line2.classList.toggle('line2-rotate'); 
+        line3.classList.toggle('line3-rotate');
     } else {
         secondaryNav.classList.add('mostrarNav');
         line1.classList.toggle('line1-rotate');
